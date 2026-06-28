@@ -27,61 +27,76 @@ A complete appointment scheduling system that processes messages from text files
 ---
 
 ## 📁 Project Structure
-
-```
 automated_scheduling/
-├── mensagens_recebidas/      # Input: message files (.txt)
-├── mensagens_enviadas/       # Output: response files (.txt)
-├── agendamentos/             # Output: generated receipts
-├── agendamentos.db           # SQLite database
-├── estados_conversas.json    # Conversation state cache
-└── sistema_agendamento.py    # Main script
+├── mensagens_recebidas/ # Input: message files (.txt)
+├── mensagens_enviadas/ # Output: response files (.txt)
+├── agendamentos/ # Output: generated receipts
+├── agendamentos.db # SQLite database
+├── estados_conversas.json # Conversation state cache
+└── sistema_agendamento.py # Main script
+
+text
+
+---
+
+## 📦 Como executar
+
+### 1. Clone o repositório
+
+```bash
+git clone https://github.com/alcitech7-oss/scheduler_db_evolution.git
+cd scheduler_db_evolution
 ```
 
----
+### 2. Coloque seus arquivos de mensagem
+Coloque seus arquivos `.txt` na pasta `mensagens_recebidas/`.
 
-## 🛠️ How to Run
+### 3. Execute o script
 
-1.  **Place your message files** in the `mensagens_recebidas/` folder.
+```bash
+python sistema_agendamento.py
+```
 
-2.  **Run the script:**
-    ```bash
-    python sistema_agendamento.py
-    ```
+### 4. Verifique os resultados
+As respostas estarão em `mensagens_enviadas/` e os comprovantes em `agendamentos/`.
 
-3.  **Check the results** in `mensagens_enviadas/` and `agendamentos/`.
-
----
-
-## 📌 Message Format
-
+📌 Message Format
 Each message file must follow this structure:
 
-```
+text
 FROM: 5511999999999
 NAME: Client Name
 DATE: 15/12/2024 10:00:00
 ==================================================
 Book with Dr. Carlos Silva for tomorrow
-```
+🧩 Technologies Used
+. Python 3.10+ (standard library only)
 
----
+. SQLite3
 
-## 🧩 Technologies Used
+. Regular Expressions (re)
 
-- Python 3.10+ (standard library only)
-- SQLite3
-- Regular Expressions (`re`)
-- JSON for state management
+. JSON for state management
 
----
+✅ Project Status
+Project validated and tested in a clean environment (cloned from scratch).
 
-## 🙏 Credits & Original Work
+. ✔️ Dependencies successfully installed
 
-This project was developed by [alictech7-oss](https://github.com/alictech7-oss).
+. ✔️ Core features validated
 
----
+. ✔️ Structure and documentation reviewed
 
-## 📄 License
+. ✔️ Ready for use and demonstration
 
-MIT — use, modify, and share freely.
+📌 Development History
+. Initial structure: Appointment system with SQLite and regex
+
+. Organization: Modular code and documentation
+
+. Documentation: Updated README and added requirements.txt
+
+. Final validation: Project tested and validated from scratch
+
+🙏 Credits & Original Work
+This project was developed by alcitech7-oss.
